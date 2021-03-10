@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lvallie <lvallie@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/10 21:50:23 by lvallie           #+#    #+#             */
+/*   Updated: 2021/03/10 21:50:25 by lvallie          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
 void	*ft_memset(void *s, int c, size_t n)
@@ -7,7 +19,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	if (s != NULL)
 	{
 		addr = (unsigned char*)s;
-		while (n--)
+		while (--n)
 			*addr++ = c;
 	}
 	return (s);
