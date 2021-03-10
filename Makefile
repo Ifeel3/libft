@@ -1,23 +1,37 @@
 NAME	=	libft.a
 
+NORM	=	~/.norminette/norminette.rb
+
 CC	=	gcc
 
-CFLAGS	=	-Wall -Werror -Wextra
+FLAGS	=	-Wall -Werror -Wextra
+
+CFLAGS	=	$(FLAGS) -I headers
 
 SRC_DIR	=	srcs
+
+HEADER	=	libft.h
 
 MEM_DIR	=	$(SRC_DIR)/mem
 
 MEM	=	$(MEM_DIR)/ft_memset.c \
 		$(MEM_DIR)/ft_bzero.c \
 		$(MEM_DIR)/ft_memcpy.c \
-		$(MEM_DIR)/ft_memmove.c
+		$(MEM_DIR)/ft_memmove.c \
+		$(MEM_DIR)/ft_memccpy.c \
+		$(MEM_DIR)/ft_memchr.c \
+		$(MEM_DIR)/ft_memcmp.c
 
-SRCS	+=	$(MEM)
+STR_DIR	=	$(SRC_DIR)/str
+
+STR	=	$(STR_DIR)/ft_strlen.c
+
+SRCS	+=	$(MEM) \
+		$(STR)
 
 OBJS	=	$(SRCS:%.c=%.o)
 
-.PHONY: all clean fclean re test
+.PHONY: all clean fclean re test norm
 
 all: $(NAME)
 
@@ -38,3 +52,6 @@ test:
 	rm -f test
 	$(CC) $(CFLAGS) -o test main.c -L. -lft
 
+norm:
+	$(NORM) -R CheckForbiddenSourceHeader $(SRCS)
+	$(NORM) headers/$(HEADER)
