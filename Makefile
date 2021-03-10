@@ -4,28 +4,22 @@ NORM	=	~/.norminette/norminette.rb
 
 CC	=	gcc
 
-FLAGS	=	-Wall -Werror -Wextra
-
-CFLAGS	=	$(FLAGS) -I headers
+CFLAGS	=	-Wall -Werror -Wextra
 
 SRC_DIR	=	srcs
 
 HEADER	=	libft.h
 
-MEM_DIR	=	$(SRC_DIR)/mem
+MEM	=	ft_memset.c \
+		ft_bzero.c \
+		ft_memcpy.c \
+		ft_memmove.c \
+		ft_memccpy.c \
+		ft_memchr.c \
+		ft_memcmp.c
 
-MEM	=	$(MEM_DIR)/ft_memset.c \
-		$(MEM_DIR)/ft_bzero.c \
-		$(MEM_DIR)/ft_memcpy.c \
-		$(MEM_DIR)/ft_memmove.c \
-		$(MEM_DIR)/ft_memccpy.c \
-		$(MEM_DIR)/ft_memchr.c \
-		$(MEM_DIR)/ft_memcmp.c
-
-STR_DIR	=	$(SRC_DIR)/str
-
-STR	=	$(STR_DIR)/ft_strlen.c \
-		$(STR_DIR)/ft_strlcpy.c
+STR	=	ft_strlen.c \
+		ft_strlcpy.c
 
 SRCS	+=	$(MEM) \
 		$(STR)
@@ -38,7 +32,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rc $@ $(OBJS)
-	ranlib $(NAME)
+	ranlib $@
 
 clean:
 	rm -rf $(OBJS)
@@ -55,4 +49,4 @@ test:
 
 norm:
 	$(NORM) -R CheckForbiddenSourceHeader $(SRCS)
-	$(NORM) headers/$(HEADER)
+	$(NORM) $(HEADER)
