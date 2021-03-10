@@ -50,7 +50,7 @@ re: fclean all
 
 test:
 	rm -f test
-	$(CC) $(CFLAGS) -o test main.c -L. -lft
+	$(CC) $(CFLAGS) -o test tester.c -L. -lft
 
 norm:
 	$(NORM) -R CheckForbiddenSourceHeader $(SRCS)
