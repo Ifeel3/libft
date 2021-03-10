@@ -24,7 +24,8 @@ MEM	=	$(MEM_DIR)/ft_memset.c \
 
 STR_DIR	=	$(SRC_DIR)/str
 
-STR	=	$(STR_DIR)/ft_strlen.c
+STR	=	$(STR_DIR)/ft_strlen.c \
+		$(STR_DIR)/ft_strlcpy.c
 
 SRCS	+=	$(MEM) \
 		$(STR)

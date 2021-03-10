@@ -66,4 +66,9 @@ int main(void)
 	printf("result of compare strings: %d(18)\n", ft_memcmp(string, string1, sizeof(string)));
 
 	printf("legth of string: %ld(12)\n", ft_strlen(string));	/*Проверка функции ft_strlen*/
+
+	ft_memset(string1, '0', sizeof(string1));
+	printf("string2 before ft_strlcpy: \"%s\", ", string1);
+	size_t test2 = ft_strlcpy(string1, string, sizeof(string));
+	printf("after: \"%s\", string length: %ld\n", string1, test2);
 }
