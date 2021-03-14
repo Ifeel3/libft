@@ -65,10 +65,15 @@ int main(void)
 	string1[6] = 'E';
 	printf("result of compare strings: %d(18)\n", ft_memcmp(string, string1, sizeof(string)));
 
-	printf("legth of string: %ld(12)\n", ft_strlen(string));	/*Проверка функции ft_strlen*/
+	printf("legth of string: %ld(12)\n", ft_strlen(string));/*Проверка функции ft_strlen*/
 
-	ft_memset(string1, '0', sizeof(string1));
+	ft_memset(string1, '0', sizeof(string1));		/*Проверка функции ft_strlcpy*/
 	printf("string2 before ft_strlcpy: \"%s\", ", string1);
 	size_t test2 = ft_strlcpy(string1, string, sizeof(string));
 	printf("after: \"%s\", string length: %ld\n", string1, test2);
+
+	char string2[25] = "Hello World!\0";			/*проверка функции ft_strlcat*/
+	printf("destination = %s, ", string2);
+	test2 = ft_strlcat(string2, string, sizeof(string2));
+	printf("result = %s, length = %lu\n", string2, test2);
 }

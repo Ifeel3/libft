@@ -10,7 +10,7 @@
 7. - [x] ft_memcmp
 8. - [x] ft_strlen
 9. - [x] ft_strlcpy
-10. - [ ] ft_strlcat
+10. - [x] ft_strlcat
 11. - [ ] ft_strchr
 12. - [ ] ft_strrchr
 13. - [ ] ft_strnstr

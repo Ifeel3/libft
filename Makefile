@@ -19,7 +19,8 @@ MEM	=	ft_memset.c \
 		ft_memcmp.c
 
 STR	=	ft_strlen.c \
-		ft_strlcpy.c
+		ft_strlcpy.c \
+		ft_strlcat.c
 
 SRCS	+=	$(MEM) \
 		$(STR)
