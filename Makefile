@@ -4,7 +4,9 @@ NORM	=	~/.norminette/norminette.rb
 
 CC	=	gcc
 
-CFLAGS	=	-Wall -Werror -Wextra
+FLAGS	=	-Wall -Werror -Wextra
+
+CFLAGS	=	$(FLAGS) -I.
 
 SRC_DIR	=	srcs
 
@@ -26,8 +28,11 @@ STR	=	ft_strlen.c \
 		ft_strnstr.c \
 		ft_strncmp.c
 
+SCH	=	ft_atoi.c
+
 SRCS	+=	$(MEM) \
-		$(STR)
+		$(STR) \
+		$(SCH)
 
 OBJS	=	$(SRCS:%.c=%.o)
 
@@ -50,7 +55,7 @@ re: fclean all
 
 test:
 	rm -f test
-	$(CC) $(CFLAGS) -o test tester.c -L. -lft
+	$(CC) $(FLAGS) -o test tester.c -L. -lft
 
 norm:
 	$(NORM) -R CheckForbiddenSourceHeader $(SRCS)

@@ -94,4 +94,6 @@ int main(void)
 	ft_hello(string1);
 	string[11] = '\0';
 	printf("result = %d\n", ft_strncmp(string, string1, sizeof(string)));
+
+	printf("result = %d\n", ft_atoi("-2345123"));
 }
