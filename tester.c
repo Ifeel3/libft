@@ -91,9 +91,17 @@ int main(void)
 	test1 = ft_strnstr(string2, string1, 12);
 	printf("searched string = \"%s\", result = %s\n", string1, test1);
 
-	ft_hello(string1);
+	ft_hello(string1);					/*проверка функции ft_strncmp*/
 	string[11] = '\0';
 	printf("result = %d\n", ft_strncmp(string, string1, sizeof(string)));
 
-	printf("result = %d\n", ft_atoi("-2345123"));
+	printf("result = %d\n", ft_atoi("-2345123"));		/*проверка функции ft_atoi*/
+
+	printf("is digit: 9=%d, a=%d\n", ft_isdigit('9'), ft_isdigit('a'));
+	printf("is lower: w=%d, W=%d\n", ft_islower('w'), ft_islower('W'));
+	printf("is upper: W=%d, w=%d\n", ft_isupper('W'), ft_isupper('w'));
+	printf("is alpha: a=%d, 9=%d\n", ft_isalpha('a'), ft_isalpha('9'));
+	printf("is alnum: g=%d, 3=%d, !=%d\n", ft_isalnum('g'), ft_isalnum('3'), ft_isalnum('!'));
+	printf("is print: \' \'=%d, \'\\0\'=%d\n", ft_isprint(' '), ft_isprint('\0'));
+	printf("is ascii: 120=%d, 130=%d\n", ft_isascii(120), ft_isascii(130));
 }

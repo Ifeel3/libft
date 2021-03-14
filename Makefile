@@ -30,9 +30,18 @@ STR	=	ft_strlen.c \
 
 SCH	=	ft_atoi.c
 
+CHECKERS=	ft_isdigit.c \
+		ft_isupper.c \
+		ft_islower.c \
+		ft_isalpha.c \
+		ft_isalnum.c \
+		ft_isprint.c \
+		ft_isascii.c
+
 SRCS	+=	$(MEM) \
 		$(STR) \
-		$(SCH)
+		$(SCH) \
+		$(CHECKERS)
 
 OBJS	=	$(SRCS:%.c=%.o)
 

@@ -16,11 +16,11 @@
 13. - [x] ft_strnstr
 14. - [x] ft_strncmp
 15. - [x] ft_atoi
-16. - [ ] ft_isalpha
-17. - [ ] ft_isdigit
-18. - [ ] ft_isalnum
-19. - [ ] ft_isascii
-20. - [ ] ft_isprint
+16. - [x] ft_isalpha
+17. - [x] ft_isdigit
+18. - [x] ft_isalnum
+19. - [x] ft_isascii
+20. - [x] ft_isprint
 21. - [ ] ft_toupper
 22. - [ ] ft_tolower
 23. - [ ] ft_calloc
