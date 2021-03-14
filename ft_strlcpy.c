@@ -6,7 +6,7 @@
 /*   By: lvallie <lvallie@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 00:47:11 by lvallie           #+#    #+#             */
-/*   Updated: 2021/03/11 03:28:34 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/03/11 22:25:34 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,22 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t siz)
 	char		*destination;
 	const char	*source;
 	size_t		n;
-	size_t		start_n;
+	size_t		i;
 
 	destination = dst;
 	source = src;
-	n = siz - 2;
-	start_n = n;
+	n = siz - 1;
+	i = 0;
 	if (n != 0)
 	{
-		*(destination + n) = '\0';
-		n--;
-		while (n != 0)
+		while (i < n)
 		{
-			if ((*(destination + n) == 0) || (*(source + n) == 0))
-				break ;
-			*(destination + n) = *(source + n);
-			n--;
+			*(destination + i) = *(source + i);
+			i++;
 		}
-		*(destination + n) = *(source + n);
+		*(destination + i) = *(source + i);
 	}
 	else if (n == 0)
 		return (0);
-	return ((source + (start_n - n)) - src);
+	return (i - 1);
 }
