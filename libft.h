@@ -6,7 +6,7 @@
 /*   By: lvallie <lvallie@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 21:51:22 by lvallie           #+#    #+#             */
-/*   Updated: 2021/03/15 01:29:58 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/03/15 02:26:25 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 #endif

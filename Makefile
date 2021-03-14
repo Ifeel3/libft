@@ -23,7 +23,8 @@ STR	=	ft_strlen.c \
 		ft_strlcat.c \
 		ft_strchr.c \
 		ft_strrchr.c \
-		ft_strnstr.c
+		ft_strnstr.c \
+		ft_strncmp.c
 
 SRCS	+=	$(MEM) \
 		$(STR)
