@@ -21,8 +21,8 @@
 18. - [x] ft_isalnum
 19. - [x] ft_isascii
 20. - [x] ft_isprint
-21. - [ ] ft_toupper
-22. - [ ] ft_tolower
+21. - [x] ft_toupper
+22. - [x] ft_tolower
 23. - [ ] ft_calloc
 24. - [ ] ft_strdup
 -

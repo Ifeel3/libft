@@ -28,7 +28,9 @@ STR	=	ft_strlen.c \
 		ft_strnstr.c \
 		ft_strncmp.c
 
-SCH	=	ft_atoi.c
+SCH	=	ft_atoi.c \
+		ft_toupper.c \
+		ft_tolower.c
 
 CHECKERS=	ft_isdigit.c \
 		ft_isupper.c \

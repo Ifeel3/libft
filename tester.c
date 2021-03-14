@@ -97,6 +97,7 @@ int main(void)
 
 	printf("result = %d\n", ft_atoi("-2345123"));		/*проверка функции ft_atoi*/
 
+								/*проверка чекеров*/
 	printf("is digit: 9=%d, a=%d\n", ft_isdigit('9'), ft_isdigit('a'));
 	printf("is lower: w=%d, W=%d\n", ft_islower('w'), ft_islower('W'));
 	printf("is upper: W=%d, w=%d\n", ft_isupper('W'), ft_isupper('w'));
@@ -104,4 +105,7 @@ int main(void)
 	printf("is alnum: g=%d, 3=%d, !=%d\n", ft_isalnum('g'), ft_isalnum('3'), ft_isalnum('!'));
 	printf("is print: \' \'=%d, \'\\0\'=%d\n", ft_isprint(' '), ft_isprint('\0'));
 	printf("is ascii: 120=%d, 130=%d\n", ft_isascii(120), ft_isascii(130));
+
+	printf("to upper: w=%c\n", ft_toupper('w'));
+	printf("to lower: W=%c\n", ft_tolower('W'));
 }
