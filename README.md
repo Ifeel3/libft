@@ -13,7 +13,7 @@
 10. - [x] ft_strlcat
 11. - [x] ft_strchr
 12. - [x] ft_strrchr
-13. - [ ] ft_strnstr
+13. - [x] ft_strnstr
 14. - [ ] ft_strncmp
 15. - [ ] ft_atoi
 16. - [ ] ft_isalpha

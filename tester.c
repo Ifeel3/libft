@@ -82,4 +82,12 @@ int main(void)
 
 	test1 = ft_strrchr(string2, 'd');			/*проверка функции ft_strrchr*/
 	printf("searched character = d, returned character = %c, start:result = %p:%p\n", test1[0], (string2 + 23), test1);
+
+	ft_bzero(string1, 12);
+	string1[0] = 'W';
+	string1[1] = 'o';
+	string1[2] = 'r';
+	string1[3] = '\0';
+	test1 = ft_strnstr(string2, string1, 12);
+	printf("searched string = \"%s\", result = %s\n", string1, test1);
 }
