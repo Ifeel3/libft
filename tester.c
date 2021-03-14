@@ -76,4 +76,10 @@ int main(void)
 	printf("destination = %s, ", string2);
 	test2 = ft_strlcat(string2, string, sizeof(string2));
 	printf("result = %s, length = %lu\n", string2, test2);
+
+	test1 = ft_strchr(string2, 'o');			/*проверка функции ft_strchr*/
+	printf("searched character = o, returned character = %c, start:result = %p:%p\n", test1[0], string2, test1);
+
+	test1 = ft_strrchr(string2, 'd');			/*проверка функции ft_strrchr*/
+	printf("searched character = d, returned character = %c, start:result = %p:%p\n", test1[0], (string2 + 23), test1);
 }
