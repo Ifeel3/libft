@@ -134,7 +134,7 @@ int main(void)
 	}
 	printf("\n");
 
-	char *string4 = ft_strdup(string3);
+	char *string4 = ft_strdup(string3);			/*проверка функции ft_strdup*/
 	printf("new string: ");
 	i = 0;
 	while (i < 5)
@@ -144,11 +144,16 @@ int main(void)
 	}
 	printf("\n");
 
-	char *string5 = ft_substr(string2, 7, 5);
+	char *string5 = ft_substr(string2, 7, 5);		/*проверка функции ft_substr*/
 	printf("result = %s\n", string5);
 	
-	char *string6 = "Hello ";
+	char *string6 = "Hello ";				/*проверка функции ft_strjoin*/
 	char *string7 = "World!";
 	char *string8 = ft_strjoin(string6, string7);
 	printf("result = %s\n", string8);
+
+	char *set = "\t\n\b WeH";
+	string8[5] = '\t';
+	char *string9 = ft_strtrim(string8, set);
+	printf("result = %s, length = %ld\n", string9, ft_strlen(string9));
 }
