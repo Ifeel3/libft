@@ -29,7 +29,8 @@ STR	=	ft_strlen.c \
 		ft_strnstr.c \
 		ft_strncmp.c \
 		ft_strdup.c \
-		ft_substr.c
+		ft_substr.c \
+		ft_strjoin.c
 
 SCH	=	ft_atoi.c \
 		ft_toupper.c \

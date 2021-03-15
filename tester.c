@@ -146,4 +146,9 @@ int main(void)
 
 	char *string5 = ft_substr(string2, 7, 5);
 	printf("result = %s\n", string5);
+	
+	char *string6 = "Hello ";
+	char *string7 = "World!";
+	char *string8 = ft_strjoin(string6, string7);
+	printf("result = %s\n", string8);
 }

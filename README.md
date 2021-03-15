@@ -27,7 +27,7 @@
 24. - [x] ft_strdup
 -
 25. - [x] ft_substr
-26. - [ ] ft_strjoin
+26. - [x] ft_strjoin
 27. - [ ] ft_strtrim
 28. - [ ] ft_split
 29. - [ ] ft_itoa
