@@ -6,7 +6,7 @@
 /*   By: lvallie <lvallie@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 21:51:22 by lvallie           #+#    #+#             */
-/*   Updated: 2021/03/15 17:23:15 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/03/15 21:49:13 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,5 @@ int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
 #endif

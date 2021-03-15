@@ -124,12 +124,22 @@ int main(void)
 
 	printf("to lower: W=%c\n", ft_tolower('W'));		/*проверка функции ft_tolower*/
 
-	char *string3 = ft_calloc(5, 1);
+	char *string3 = ft_calloc(5, 1);			/*проверка функции ft_calloc*/
 	printf("new string: ");
 	i = 0;
 	while (i < 5)
 	{
 		printf("%d", string3[i]);
+		i++;
+	}
+	printf("\n");
+
+	char *string4 = ft_strdup(string3);
+	printf("new string: ");
+	i = 0;
+	while (i < 5)
+	{
+		printf("%d", string4[i]);
 		i++;
 	}
 	printf("\n");

@@ -24,7 +24,7 @@
 21. - [x] ft_toupper
 22. - [x] ft_tolower
 23. - [x] ft_calloc
-24. - [ ] ft_strdup
+24. - [x] ft_strdup
 -
 25. - [ ] ft_substr
 26. - [ ] ft_strjoin
