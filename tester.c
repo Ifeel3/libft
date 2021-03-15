@@ -21,8 +21,8 @@ void ft_hello(char *str)
 
 int main(void)
 {
-	char string[] = "Hello World!\0";
-	char string1[] = "000000000000\0";
+	char string[] = "Hello World!";
+	char string1[] = "000000000000";
 	size_t i;
 	char *str1;
 	char *str2;
@@ -30,12 +30,19 @@ int main(void)
 	printf("test string: %s\n", string);
 
 	ft_memset(string, '1', sizeof(string));			/*Проверка функции ft_memset*/
-	printf("string after ft_memset: %s\n", string);
+	printf("string after ft_memset: ");
+	i = 0;
+	while (i < sizeof(string))
+	{
+		printf("%c", string[i]);
+		i++;
+	}
+	printf("\n");
 
 	ft_bzero(string, sizeof(string));			/*Проверка функции ft_bzero*/
 	printf("string after ft_bzero in digits: ");
 	i = 0;
-	while (i < sizeof(string) - 1)
+	while (i < sizeof(string))
 	{
 		printf("%d", string[i]);
 		i++;
@@ -68,7 +75,14 @@ int main(void)
 	printf("legth of string: %ld(12)\n", ft_strlen(string));/*Проверка функции ft_strlen*/
 
 	ft_memset(string1, '0', sizeof(string1));		/*Проверка функции ft_strlcpy*/
-	printf("string2 before ft_strlcpy: \"%s\", ", string1);
+	printf("string2 before ft_strlcpy: \"");
+	i = 0;
+	while (i < sizeof(string1))
+	{
+		printf("%c", string1[i]);
+		i++;
+	}
+	printf("\", ");
 	size_t test2 = ft_strlcpy(string1, string, sizeof(string));
 	printf("after: \"%s\", string length: %ld\n", string1, test2);
 
@@ -106,6 +120,17 @@ int main(void)
 	printf("is print: \' \'=%d, \'\\0\'=%d\n", ft_isprint(' '), ft_isprint('\0'));
 	printf("is ascii: 120=%d, 130=%d\n", ft_isascii(120), ft_isascii(130));
 
-	printf("to upper: w=%c\n", ft_toupper('w'));
-	printf("to lower: W=%c\n", ft_tolower('W'));
+	printf("to upper: w=%c\n", ft_toupper('w'));		/*проверка функции ft_toupper*/
+
+	printf("to lower: W=%c\n", ft_tolower('W'));		/*проверка функции ft_tolower*/
+
+	char *string3 = ft_calloc(5, 1);
+	printf("new string: ");
+	i = 0;
+	while (i < 5)
+	{
+		printf("%d", string3[i]);
+		i++;
+	}
+	printf("\n");
 }
