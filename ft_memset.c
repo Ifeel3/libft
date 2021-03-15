@@ -6,7 +6,7 @@
 /*   By: lvallie <lvallie@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 21:50:23 by lvallie           #+#    #+#             */
-/*   Updated: 2021/03/10 21:50:25 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/03/15 18:39:22 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,11 @@ void	*ft_memset(void *s, int c, size_t n)
 	if (s != NULL)
 	{
 		addr = (unsigned char*)s;
-		while (--n)
-			*addr++ = c;
+		while (n)
+		{
+			*(addr++) = c;
+			n--;
+		}
 	}
 	return (s);
 }
