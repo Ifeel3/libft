@@ -143,4 +143,7 @@ int main(void)
 		i++;
 	}
 	printf("\n");
+
+	char *string5 = ft_substr(string2, 7, 5);
+	printf("result = %s\n", string5);
 }
