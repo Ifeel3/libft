@@ -152,7 +152,7 @@ int main(void)
 	char *string8 = ft_strjoin(string6, string7);
 	printf("result = %s\n", string8);
 
-	char *set = "\t\n\b WeH";
+	char *set = "\t\n\b WeH";	/*проверка функции ft_strtrim*/
 	string8[5] = '\t';
 	char *string9 = ft_strtrim(string8, set);
 	printf("result = %s, length = %ld\n", string9, ft_strlen(string9));

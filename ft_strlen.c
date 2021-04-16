@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvallie <lvallie@42.fr>                    +#+  +:+       +#+        */
+/*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/10 21:50:46 by lvallie           #+#    #+#             */
-/*   Updated: 2021/03/10 22:38:07 by lvallie          ###   ########.fr       */
+/*   Created: 2021/04/16 12:03:26 by lvallie           #+#    #+#             */
+/*   Updated: 2021/04/16 12:03:51 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')

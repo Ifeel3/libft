@@ -1,6 +1,6 @@
 NAME	=	libft.a
 
-NORM	=	~/.norminette/norminette.rb
+NORM	=	norminette
 
 CC	=	gcc
 

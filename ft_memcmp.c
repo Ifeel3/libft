@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvallie <lvallie@42.fr>                    +#+  +:+       +#+        */
+/*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/10 21:49:15 by lvallie           #+#    #+#             */
-/*   Updated: 2021/03/10 23:03:14 by lvallie          ###   ########.fr       */
+/*   Created: 2021/04/16 12:01:26 by lvallie           #+#    #+#             */
+/*   Updated: 2021/04/16 12:01:41 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*str1;
 	unsigned char	*str2;
 
-	str1 = (unsigned char*)s1;
-	str2 = (unsigned char*)s2;
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
 	i = 0;
 	while (i <= n)
 	{

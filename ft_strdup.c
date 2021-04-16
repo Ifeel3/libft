@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvallie <lvallie@42.fr>                    +#+  +:+       +#+        */
+/*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/15 21:38:12 by lvallie           #+#    #+#             */
-/*   Updated: 2021/03/15 23:53:19 by lvallie          ###   ########.fr       */
+/*   Created: 2021/04/16 12:09:50 by lvallie           #+#    #+#             */
+/*   Updated: 2021/04/16 12:10:08 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strdup(const char *s)
 {
 	char	*result;
 
-	result = (char*)malloc(ft_strlen(s) + 1);
+	result = (char *)malloc(ft_strlen(s) + 1);
 	if (result != NULL)
 	{
 		ft_strlcpy(result, s, ft_strlen(s));
