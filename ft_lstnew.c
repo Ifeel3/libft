@@ -1,0 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/18 15:58:53 by lvallie           #+#    #+#             */
+/*   Updated: 2021/04/18 18:25:18 by lvallie          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+#include "libft_bonus.h"
+
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*new;
+
+	new = (t_list *)malloc(sizeof(t_list));
+	if (sizeof(new) != 0)
+	{
+		new->content = content;
+		new->next = NULL;
+		return (new);
+	}
+	return (NULL);
+}
