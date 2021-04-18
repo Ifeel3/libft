@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/18 12:56:09 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/18 20:06:50 by lvallie          ###   ########.fr       */
+/*   Created: 2021/04/18 21:27:14 by lvallie           #+#    #+#             */
+/*   Updated: 2021/04/18 21:44:44 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char	*ft_strdup(const char *src)
 {
-	char		*destination;
-	const char	*source;
-	size_t		tmp;
+	char	*new;
 
-	tmp = size;
-	destination = dst;
-	source = src;
-	if (tmp != 0)
-	{
-		while (--tmp)
-		{
-			if (*source == '\0' || *destination == '\0')
-				break ;
-			*destination = *source;
-			destination++;
-			source++;
-		}
-		*destination = '\0';
-	}
-	return (ft_strlen(src));
+	new = ft_calloc(1, ft_strlen(src) + 1);
+	if (new != NULL)
+		ft_memmove(new, src, ft_strlen(src) + 1);
+	return (new);
 }
