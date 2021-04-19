@@ -6,7 +6,7 @@
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 14:03:11 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/19 21:36:39 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/04/19 23:04:21 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 static int	ft_isspace(int c);
 static int	ft_isplusminus(int c);
+static int	ft_isbig(long long int result, int minus, int toobig);
 
 int	ft_atoi(const char *str)
 {
-	int	result;
-	int	minus;
+	long long int	result;
+	int				minus;
+	int				toobig;
 
+	toobig = 0;
 	result = 0;
 	minus = 1;
 	while ((!ft_isdigit(*str) || ft_isspace(*str)) && !ft_isplusminus(*str))
@@ -35,8 +38,9 @@ int	ft_atoi(const char *str)
 	{
 		result = (result * 10) + (*str - 48);
 		str++;
+		toobig++;
 	}
-	return (result * minus);
+	return (ft_isbig(result, minus, toobig));
 }
 
 static int	ft_isspace(int c)
@@ -53,4 +57,17 @@ static int	ft_isplusminus(int c)
 		return (1);
 	else
 		return (0);
+}
+
+static int	ft_isbig(long long int result, int minus, int toobig)
+{
+	if (toobig > 19 && minus == 1)
+		return (-1);
+	if (toobig > 19 && minus == -1)
+		return (0);
+	if (result > 9223372036854775807 && minus == 1)
+		return (-1);
+	if (result > 9223372036854775807 && minus == -1)
+		return (0);
+	return ((int)result * minus);
 }
