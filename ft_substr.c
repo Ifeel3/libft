@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_bonus.h                                      :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/18 17:52:32 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/20 01:52:19 by lvallie          ###   ########.fr       */
+/*   Created: 2021/04/19 23:42:27 by lvallie           #+#    #+#             */
+/*   Updated: 2021/04/19 23:54:46 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_BONUS_H
-# define LIBFT_BONUS_H
+#include "libft.h"
 
-typedef struct s_list
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	void			*content;
-	struct s_list	*next;
-}	t_list;
+	char	*new;
 
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-int		ft_lstsize(t_list *lst);
-t_list	*ft_lstlast(t_list *lst);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-#endif
+	if (s == NULL)
+		return (NULL);
+	new = malloc((len + 1) * sizeof(*s));
+	if (new == NULL || len <= 0)
+		return (NULL);
+	if (start < ft_strlen(s))
+	{
+		ft_memmove(new, s + start, len);
+		*(new + len) = '\0';
+	}
+	return (new);
+}

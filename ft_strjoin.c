@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_bonus.h                                      :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/18 17:52:32 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/20 01:52:19 by lvallie          ###   ########.fr       */
+/*   Created: 2021/04/19 23:58:37 by lvallie           #+#    #+#             */
+/*   Updated: 2021/04/19 23:59:33 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_BONUS_H
-# define LIBFT_BONUS_H
+#include "libft.h"
 
-typedef struct s_list
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	void			*content;
-	struct s_list	*next;
-}	t_list;
+	char	*new;
+	char	*tmp;
 
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-int		ft_lstsize(t_list *lst);
-t_list	*ft_lstlast(t_list *lst);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-#endif
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	new = malloc((sizeof(*s1) + 1) * (ft_strlen(s1) + ft_strlen(s2)));
+	if (new == NULL)
+		return (NULL);
+	tmp = new;
+	ft_memmove(tmp, s1, ft_strlen(s1));
+	tmp += ft_strlen(s1);
+	ft_memmove(tmp, s2, ft_strlen(s2));
+	tmp += ft_strlen(s2);
+	*tmp = '\0';
+	return (new);
+}

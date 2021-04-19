@@ -6,7 +6,7 @@
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 18:12:37 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/18 18:20:22 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/04/20 02:15:32 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
-	lst = &new;
+	*lst = new;
 }

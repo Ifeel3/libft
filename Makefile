@@ -36,7 +36,9 @@ STR		+= ft_strlen.c \
 		ft_strncmp.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
-		ft_strnstr.c
+		ft_strnstr.c \
+		ft_substr.c \
+		ft_strjoin.c
 
 OTHR	+= ft_toupper.c \
 		ft_tolower.c \
@@ -50,7 +52,10 @@ SRCS	+= $(CHK) \
 		$(STR)
 
 BONUS	+= ft_lstnew.c \
-		ft_lstadd_front.c
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c
 
 BOBJS	= $(BONUS:%.c=%.o)
 
