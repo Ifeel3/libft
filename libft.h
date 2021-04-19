@@ -6,7 +6,7 @@
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 00:12:05 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/18 21:23:39 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/04/19 14:11:18 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *src);
+int		ft_atoi(const char *str);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 #endif
