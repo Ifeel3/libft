@@ -8,8 +8,7 @@ CC		= gcc
 
 NORMIN	= norminette
 
-HEADER	+= libft.h \
-		libft_bonus.h
+HEADER	= libft.h
 
 CHK		+= ft_isdigit.c \
 		ft_islower.c \

@@ -6,17 +6,16 @@
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 01:38:26 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/20 01:46:51 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/04/20 02:40:35 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
 int	ft_lstsize(t_list *lst)
 {
 	t_list	*tmp;
-	int i;
+	int		i;
 
 	if (lst == NULL)
 		return (0);
