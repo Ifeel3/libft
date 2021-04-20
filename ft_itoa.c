@@ -6,7 +6,7 @@
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 13:55:48 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/20 16:00:07 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/04/20 16:01:08 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_itoa(int n)
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	i = ft_howbig(n);
-	result = malloc(sizeof(char) * i);
+	result = malloc(sizeof(char) * i + 1);
 	if (result == NULL)
 		return (NULL);
 	if (n < 0)
