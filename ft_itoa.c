@@ -6,11 +6,12 @@
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 13:55:48 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/20 15:43:57 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/04/20 16:00:07 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	ft_howbig(int c);
 
@@ -22,14 +23,14 @@ char	*ft_itoa(int n)
 	if (n == 0)
 		return (ft_strdup("0"));
 	if (n == -2147483648)
-		return (ft_strdup("-2147483648"))
+		return (ft_strdup("-2147483648"));
 	i = ft_howbig(n);
 	result = malloc(sizeof(char) * i);
 	if (result == NULL)
 		return (NULL);
 	if (n < 0)
 	{
-		n = n + (-n) + n;
+		n = n * (-1);
 		result[0] = '-';
 	}
 	result[i] = '\0';
