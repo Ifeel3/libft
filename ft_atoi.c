@@ -6,7 +6,7 @@
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 14:03:11 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/19 23:25:01 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/04/20 23:05:41 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int	ft_atoi(const char *str)
 	int				minus;
 	int				toobig;
 
+	if (*str == '\0')
+		return (0);
 	toobig = 0;
 	result = 0;
 	minus = 1;

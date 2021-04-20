@@ -38,7 +38,8 @@ STR		+= ft_strlen.c \
 		ft_strnstr.c \
 		ft_substr.c \
 		ft_strjoin.c \
-		ft_strdup.c
+		ft_strdup.c \
+		ft_strmapi.c
 
 OTHR	+= ft_toupper.c \
 		ft_tolower.c \
