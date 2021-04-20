@@ -6,7 +6,7 @@
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 00:12:05 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/20 12:50:31 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/04/20 13:47:07 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_itoa(int n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);

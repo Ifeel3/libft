@@ -37,13 +37,17 @@ STR		+= ft_strlen.c \
 		ft_strlcat.c \
 		ft_strnstr.c \
 		ft_substr.c \
-		ft_strjoin.c
+		ft_strjoin.c \
+		ft_strdup.c
 
 OTHR	+= ft_toupper.c \
 		ft_tolower.c \
 		ft_calloc.c \
-		ft_strdup.c \
-		ft_atoi.c
+		ft_atoi.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_itoa.c
 
 SRCS	+= $(CHK) \
 		$(OTHR) \
