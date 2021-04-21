@@ -6,7 +6,7 @@
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 14:03:11 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/20 23:05:41 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/04/21 19:47:46 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	ft_atoi(const char *str)
 
 static int	ft_isspace(int c)
 {
-	if (c == ' ' || c =='\t' || c == '\v' || c == '\f' || c == '\r' || c == '\n')
+	if (c == 32 || (c >= 9 && c <= 13))
 		return (1);
 	else
 		return (0);
@@ -55,7 +55,7 @@ static int	ft_isspace(int c)
 
 static int	ft_isplusminus(int c)
 {
-	if (c == 43 || c == 45 || c == '\e')
+	if (c == 43 || c == 45 || c == '\e' || ft_isalpha(c))
 		return (1);
 	else
 		return (0);
