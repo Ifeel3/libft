@@ -6,7 +6,7 @@
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 12:34:20 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/18 12:54:35 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/04/22 19:26:49 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,17 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	s1len;
-	size_t	s2len;
+	const char	*string1;
+	const char	*string2;
 
-	s1len = ft_strlen(s1);
-	s2len = ft_strlen(s2);
-	if (s1len == 0 || s2len == 0)
-		return (ft_memcmp(s1, s2, 1));
-	if (s1len >= n && s2len >= n)
-		return (ft_memcmp(s1, s2, n));
-	else if (s1len < n || s2len < n)
+	string1 = s1;
+	string2 = s2;
+	if (ft_strlen(string1) >= n && ft_strlen(string2) >= n)
+		return (ft_memcmp(string1, string2, n));
+	while (--n && *string1 != '\0' && *string2 != '\0')
 	{
-		if (s1len <= s2len)
-			return (ft_memcmp(s1, s2, ft_strlen(s1)));
-		else if (s1len > s2len)
-			return (ft_memcmp(s1, s2, ft_strlen(s2)));
+		if ((unsigned char)*string1++ != (unsigned char)*string2++)
+			break ;
 	}
-	return (0);
+	return ((unsigned char)*string1 - (unsigned char)*string2);
 }
