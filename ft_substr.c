@@ -6,7 +6,7 @@
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 23:42:27 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/19 23:54:46 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/04/22 18:59:21 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (s == NULL)
 		return (NULL);
 	new = malloc((len + 1) * sizeof(*s));
-	if (new == NULL || len <= 0)
+	if (new == NULL)
 		return (NULL);
 	if (start < ft_strlen(s))
 	{
