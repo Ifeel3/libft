@@ -40,8 +40,7 @@ STR		+= ft_strlen.c \
 		ft_strjoin.c \
 		ft_strdup.c \
 		ft_strmapi.c \
-		ft_strtrim.c \
-		ft_split.c
+		ft_strtrim.c
 
 OTHR	+= ft_toupper.c \
 		ft_tolower.c \
