@@ -6,7 +6,7 @@
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 23:58:37 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/22 23:46:14 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/04/23 12:53:55 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	new = malloc((sizeof(*s1) + 1) * (ft_strlen(s1) + ft_strlen(s2)));
+	new = malloc(sizeof(*s1) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (new == NULL)
 		return (NULL);
 	tmp = new;
