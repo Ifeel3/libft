@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_findstart(char const *s1, char const *set);
 static int	ft_findend(char const *s1, char const *set);
