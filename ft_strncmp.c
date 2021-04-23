@@ -6,7 +6,7 @@
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 12:34:20 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/22 19:26:49 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/04/23 00:16:11 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,15 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	string2 = s2;
 	if (ft_strlen(string1) >= n && ft_strlen(string2) >= n)
 		return (ft_memcmp(string1, string2, n));
-	while (--n && *string1 != '\0' && *string2 != '\0')
+	if (n >= 1)
 	{
-		if ((unsigned char)*string1++ != (unsigned char)*string2++)
-			break ;
+		while (--n && *string1 != '\0' && *string2 != '\0')
+		{
+			if ((unsigned char)*string1 != (unsigned char)*string2)
+				break ;
+			string1++;
+			string2++;
+		}
 	}
 	return ((unsigned char)*string1 - (unsigned char)*string2);
 }
