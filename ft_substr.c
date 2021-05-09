@@ -6,7 +6,7 @@
 /*   By: lvallie <lvallie@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 23:42:27 by lvallie           #+#    #+#             */
-/*   Updated: 2021/04/23 14:16:35 by lvallie          ###   ########.fr       */
+/*   Updated: 2021/05/09 05:04:28 by lvallie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,23 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char		*new;
-	char const	*stmp;
-	char		*newtmp;
+	char	*new;
+	char	*tmp;
+	char	*src;
+	size_t	strlen;
 
-	if (s == NULL)
-		return (NULL);
-	if (len <= ft_strlen(s))
-		new = malloc((len + 1) * sizeof(*s));
+	src = (char *)s + start;
+	strlen = ft_strlen(s);
+	if (ft_strlen(src) >= len)
+		new = malloc(sizeof(char) * (len + 1));
 	else
-		new = malloc((ft_strlen(s) + 1) * sizeof(*s));
-	if (new == NULL)
-		return (NULL);
-	if (start <= ft_strlen(s) && start <= len)
-		stmp = s + start;
-	else
+		new = malloc(sizeof(char) * (ft_strlen(src) + 1));
+	tmp = new;
+	while (len && *src)
 	{
-		*new = 0;
-		return (new);
+		*tmp++ = *src++;
+		len--;
 	}
-	newtmp = new;
-	while (len-- && *stmp != 0)
-		*newtmp++ = *stmp++;
-	*newtmp = 0;
+	*tmp = 0;
 	return (new);
 }
