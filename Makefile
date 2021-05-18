@@ -77,7 +77,7 @@ OBJS	= $(SRCS:%.c=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $@ $(OBJS)
+	ar rc $@ $?
 	ranlib $@
 
 bonus: $(BOBJS)
