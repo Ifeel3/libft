@@ -3,8 +3,7 @@ FLAGS	= -Wall -Werror -Wextra
 CFLAGS	= $(FLAGS) -I.
 CC		= gcc
 NORMIN	= norminette
-SRC		= $(wildcard src/*.c) \
-		$(wildcard srcprintf/*.c)
+SRC		= $(wildcard src/*.c)
 OBJ		= $(SRC:%.c=%.o)
 
 .PHONY: all clean fclean re norm
