@@ -21,31 +21,31 @@ static size_t	ft_findwords(char const *s, char c)
 	return (i);
 }
 
-static void	ft_wordcopy(char **string, char const *s, char c, size_t words)
+static void    ft_wordcopy(char **string, char const *s, char c, size_t words)
 {
-	char const	*tmpstart;
-	char const	*tmpend;
-	size_t		i;
-	size_t		j;
+    char const    *tmpstart;
+    char const    *tmpend;
+    size_t        i;
+    size_t        j;
 
-	tmpstart = s;
-	tmpend = s;
-	i = 0;
-	while (words)
-	{
-		while (*tmpend++ == c)
-			tmpstart = tmpend;
-		while (*tmpend != c)
-			tmpend++;
-		string[i] = malloc(sizeof(char) * (tmpend - tmpstart) + 1);
-		if (string[i] == NULL)
-			return ;
-		j = 0;
-		while (tmpstart != tmpend)
-			string[i][j++] = *tmpstart++;
-		string[i++][j] = 0;
-		words--;
-	}
+    tmpstart = s;
+    tmpend = s;
+    i = 0;
+    while (words)
+    {
+        while (*tmpend++ == c)
+            tmpstart = tmpend;
+        while (*tmpend != c && *tmpend != 0)
+            tmpend++;
+        string[i] = malloc(sizeof(char) * (tmpend - tmpstart) + 1);
+        if (string[i] == NULL)
+            return ;
+        j = 0;
+        while (tmpstart != tmpend)
+            string[i][j++] = *tmpstart++;
+        string[i++][j] = 0;
+        words--;
+    }
 }
 
 char	**ft_split(char const *s, char c)
